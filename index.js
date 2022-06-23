@@ -4,11 +4,11 @@ const express = require('express');
 const cors = require('cors');
 
 //import Models
-const contactModel = require('./models/contactModel');
+// const contactModel = require('./models/contactModel');
 const workModel = require('./models/works')
 
 //import routes
-const contactRoutes = require('./routes/contactRoutes');
+const contactRoutes = require('./Routes/contactRoutes');
 
 
 const app = express();
