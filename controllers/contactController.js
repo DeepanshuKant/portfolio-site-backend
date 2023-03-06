@@ -31,13 +31,12 @@ exports.newContact = async (req, res, next) => {
             text: "Thank you for contacting us. We will get back to you soon."
         }
 
-        transporter.sendMail(options, (err, info) => {
+        transporter.sendMail(options, function (err, info) {
             if (err) {
                 console.log(err);
-                return;
+            } else {
+                console.log("Sent" + info.response);
             }
-
-            console.log("Sent " + info.response);
         })
 
         res.status(201).json({
